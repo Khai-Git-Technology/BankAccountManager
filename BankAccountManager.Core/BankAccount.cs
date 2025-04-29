@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankAccountManager.Core
 {
-    public class BankAccount : IBankAccount
+    public class BankAccount : IBankAccount, IAccountOperations
     {
         private decimal balance;
         private decimal loanBalance;
@@ -35,6 +35,17 @@ namespace BankAccountManager.Core
 
         public decimal GetBalance() => balance;
 
+        public void PerformTransaction(decimal amount, string type)
+        {
+            if (type == "deposit") Deposit(amount);
+            else if (type == "withdraw") Withdraw(amount);
+        }
+
+
+        public void ManageOperations()
+        {
+            Console.WriteLine("Операції рахунку керуються через інші методи.");
+        }
 
         public void AddTransaction(string details)
         {

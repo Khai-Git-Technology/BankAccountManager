@@ -47,6 +47,7 @@ namespace BankAccountManager.Core
             Console.WriteLine("Операції рахунку керуються через інші методи.");
         }
 
+
         public void AddTransaction(string details)
         {
             transactionHistory.Add(details);

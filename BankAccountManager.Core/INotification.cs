@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankAccountManager.Core
 {
-    internal interface INotification
+    public interface INotification
     {
         void SendTransactionNotification(string message);
         void SendBalanceChangeNotification(decimal balance);

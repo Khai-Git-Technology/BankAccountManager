@@ -14,6 +14,10 @@ namespace BankAccountManager.Core
         private bool isAuthenticated = false;
         private readonly INotification notificationService;
 
+        public BankAccount(INotification notificationService)
+        {
+            this.notificationService = notificationService;
+        }
         public void Deposit(decimal amount)
         {
             balance += amount;
@@ -40,7 +44,6 @@ namespace BankAccountManager.Core
             if (type == "deposit") Deposit(amount);
             else if (type == "withdraw") Withdraw(amount);
         }
-
 
         public void ManageOperations()
         {

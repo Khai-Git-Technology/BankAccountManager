@@ -12,9 +12,9 @@ namespace BankAccountManager.Core
         private decimal loanBalance;
         private List<string> transactionHistory = new();
         private bool isAuthenticated = false;
-        private readonly INotification notificationService;
+        private INotification notificationService;
 
-        public BankAccount(INotification notificationService)
+        public void SetNotificationService(INotification notificationService)
         {
             this.notificationService = notificationService;
         }
@@ -22,7 +22,7 @@ namespace BankAccountManager.Core
         {
             balance += amount;
             AddTransaction($"Поповнення: {amount} грн");
-            notificationService.SendBalanceChangeNotification(balance);
+            notificationService?.SendBalanceChangeNotification(balance);
         }
 
         public void Withdraw(decimal amount)
@@ -34,7 +34,7 @@ namespace BankAccountManager.Core
             }
             balance -= amount;
             AddTransaction($"Зняття: {amount} грн");
-            notificationService.SendBalanceChangeNotification(balance);
+            notificationService?.SendBalanceChangeNotification(balance);
         }
 
         public decimal GetBalance() => balance;

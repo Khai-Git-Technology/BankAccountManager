@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankAccountManager.Core
 {
-    public class BankAccount : IBankAccount, IAccountOperations
+    public class BankAccount : IBankAccount, IAccountOperations, IAuthentication, ICreditAccount, ITransactionHistory
     {
         private decimal balance;
         private decimal loanBalance;
@@ -50,12 +50,58 @@ namespace BankAccountManager.Core
             Console.WriteLine("Операції рахунку керуються через інші методи.");
         }
 
-
+        public void TakeLoan(decimal amount)
+        {
+            loanBalance += amount;
+            balance += amount;
+            AddTransaction($"Отримано кредит: {amount} грн");
+            notificationService?.SendBalanceChangeNotification(balance);
+        }
         public void AddTransaction(string details)
         {
             transactionHistory.Add(details);
             notificationService.SendTransactionNotification(details);
         }
+        public bool Login(string username, string password)
+        {
+            if (username == "user" && password == "password")
+            {
+                isAuthenticated = true;
+                Console.WriteLine("Вхід виконано успішно!");
+                return true;
+            }
+            Console.WriteLine("Невірні облікові дані.");
+            return false;
+        }
+        public bool CheckAccessRights(string role) => isAuthenticated;
+        public void Logout()
+        {
+            isAuthenticated = false;
+            Console.WriteLine("Вихід із системи виконано.");
+        }
 
+        public void RepayLoan(decimal amount)
+        {
+            if (amount > loanBalance)
+            {
+                Console.WriteLine("Сума перевищує залишок кредиту!");
+                return;
+            }
+            loanBalance -= amount;
+            balance -= amount;
+            AddTransaction($"Погашення кредиту: {amount} грн");
+            notificationService?.SendBalanceChangeNotification(balance);
+        }
+
+        public decimal CheckLoanBalance() => loanBalance;
+
+        public void GetTransactionHistory()
+        {
+            Console.WriteLine("Історія транзакцій:");
+            foreach (var transaction in transactionHistory)
+            {
+                Console.WriteLine(transaction);
+            }
+        }
     }
 }

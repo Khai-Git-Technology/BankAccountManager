@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BankAccountManager.Core\BankAccountManager.Core.csproj" />
+    <ProjectReference Include="..\BankAccountManager.Wrappers\BankAccountManager.Wrappers.csproj" />
     <ProjectReference Include="..\BankAccountManager\BankAccountManager.csproj" />
   </ItemGroup>
 

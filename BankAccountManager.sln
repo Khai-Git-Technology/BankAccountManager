@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountManager.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountManager.Tests", "BankAccountManager.Tests\BankAccountManager.Tests.csproj", "{172110E7-E394-4626-8019-19AF98367F04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountManager.Wrappers", "BankAccountManager.Wrappers\BankAccountManager.Wrappers.csproj", "{AA22116D-661D-4883-A7D3-C8FBDDBDC009}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{172110E7-E394-4626-8019-19AF98367F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{172110E7-E394-4626-8019-19AF98367F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{172110E7-E394-4626-8019-19AF98367F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA22116D-661D-4883-A7D3-C8FBDDBDC009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA22116D-661D-4883-A7D3-C8FBDDBDC009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA22116D-661D-4883-A7D3-C8FBDDBDC009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA22116D-661D-4883-A7D3-C8FBDDBDC009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

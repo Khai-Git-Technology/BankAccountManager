@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountManager", "BankAccountManager\BankAccountManager.csproj", "{862B867F-1B8D-4CC8-9A96-4DAA1AF67EB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountManager", "BankAccountManager\BankAccountManager.csproj", "{862B867F-1B8D-4CC8-9A96-4DAA1AF67EB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountManager.Core", "BankAccountManager.Core\BankAccountManager.Core.csproj", "{5102F999-A70A-4C48-8BC3-CD8AE8263336}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountManager.Core", "BankAccountManager.Core\BankAccountManager.Core.csproj", "{5102F999-A70A-4C48-8BC3-CD8AE8263336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountManager.Tests", "BankAccountManager.Tests\BankAccountManager.Tests.csproj", "{172110E7-E394-4626-8019-19AF98367F04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountManager.Wrappers", "BankAccountManager.Wrappers\BankAccountManager.Wrappers.csproj", "{AA22116D-661D-4883-A7D3-C8FBDDBDC009}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{5102F999-A70A-4C48-8BC3-CD8AE8263336}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5102F999-A70A-4C48-8BC3-CD8AE8263336}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5102F999-A70A-4C48-8BC3-CD8AE8263336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172110E7-E394-4626-8019-19AF98367F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172110E7-E394-4626-8019-19AF98367F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172110E7-E394-4626-8019-19AF98367F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172110E7-E394-4626-8019-19AF98367F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA22116D-661D-4883-A7D3-C8FBDDBDC009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA22116D-661D-4883-A7D3-C8FBDDBDC009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA22116D-661D-4883-A7D3-C8FBDDBDC009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA22116D-661D-4883-A7D3-C8FBDDBDC009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
